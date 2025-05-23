@@ -1,0 +1,5 @@
+{
+    "log_file": "keylog.txt",
+    "max_log_size": 5242880,
+    "log_mouse": true
+}
