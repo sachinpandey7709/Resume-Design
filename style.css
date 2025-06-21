@@ -1,0 +1,215 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0ef;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Resume Container */
+.resume {
+  width: 650px;
+  background: #ff2770;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section */
+.left_section {
+  background: black;
+  width: 250px;
+  color: #ff2770;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name_heading {
+  text-transform: uppercase;
+  color: #ff2770;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.name_p {
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  background: black;
+  color: #ff2770;
+  padding: 4px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.profile_img {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile_img img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #ff2770;
+}
+
+.about_p {
+  color: #ff2770;
+  font-size: 13px;
+  margin-top: 20px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Contact List */
+.contact_ul {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.contact_ul li {
+  list-style: none;
+  font-size: 12px;
+  color: #ff2770;
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contact_ul li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+/* Right Section */
+.right_section {
+  background: black;
+  width: calc(100% - 250px);
+  padding: 20px;
+}
+
+.content {
+  padding: 0;
+}
+
+.right_heading {
+  color: #ff2770;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #ff2770;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.lr-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.lr-box .left {
+  font-size: 14px;
+  color: #ff2770;
+}
+
+.lr-box .right {
+  font-size: 14px;
+  color: #ff2770;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .left_section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .right_section {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .right_heading {
+    font-size: 16px;
+  }
+}
+
+.right_heading{
+  color: #ff2770;
+  font-size: 22px;
+  text-transform: uppercase;
+  border-bottom: 5px solid #ff2770;
+}
+
+.right_heading img{
+  width: 35px;
+  padding-right: 10px;
+  margin-bottom: -9px;
+}
+
+.left{
+  width: 25%;
+  float: left;
+}
+
+.right{
+  width: 75%;
+  float: left;
+}
+
+.lr-box{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.p4{
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff2770;
+}
+
+.p5{
+  font-size: 12px;
+  color: #ff2770;
+}
+
+.s-box{
+  width: 50%;
+  float: left;
+  padding: 20px 20px 0px;
+}
+
+.skill{
+  margin-left: 17px;
+  color: #ff2770;
+  font-size: 16px;
+}
+
+.skill li{list-style-type: square;
+padding-top: 10px;}
+
+.skill li span{
+  float: right;
+  color: #ff2770;
+  padding-right: 18px;
+}
